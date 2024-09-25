@@ -1,0 +1,9 @@
+<h2>Your Projects</h2>
+<ul>
+    {% for project in projects %}
+        <li>{{ project.title }} - {{ project.status }}</li>
+    {% empty %}
+        <li>No projects submitted yet.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'submit_project' %}">Submit a new project</a>
